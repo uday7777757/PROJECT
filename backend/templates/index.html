@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Student Marks Form</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Student Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="roll">Roll Number</label>
+        <input type="text" id="roll" name="roll" required>
+      </div>
+
+      <div class="form-group">
+        <label for="math">Math Marks</label>
+        <input type="number" id="math" name="math" min="0" max="100" required>
+      </div>
+
+      <div class="form-group">
+        <label for="physics">Physics Marks</label>
+        <input type="number" id="physics" name="physics" min="0" max="100" required>
+      </div>
+
+      <div class="form-group">
+        <label for="biology">Biology Marks</label>
+        <input type="number" id="biology" name="biology" min="0" max="100" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+  <div class="All details">
+    <h2 style="text-align: center;" > All details</h2>
+    <form action="students",method="GET">
+      <button type="submit" class="extr-btn">extr-btn</button>
+    </form>
+  </div>
+  <div class = "students_max">
+    <h2 style="padding: 10px;text-align:center;"> Maximum marks in the math</h2>
+    <form action="maxmarks",method="GET">
+      <button type="submit" class="maxmarks">return</button>
+    </form>
+  </div>
+  <div class="id based">
+    <h2 style="text-align: center;"> id based retrival</h2>
+    <form action="studentid" method='POST'>
+      <label for="id">id</label>
+      <input type="number" id="id" name="id" required>
+      <button type="submit" class="id based">to tretrive</button>
+    </form>
+  </div>
+
+</body>
+</html>
